@@ -1,14 +1,25 @@
-from huffman import BitBuffer,HuffmanEncoder, CompressorLetters, CompressorPrefix
-import sys
-import os
-import subprocess
+# importing required libaries
 
+from huffman import CompressorLetters, CompressorPrefix
+import sys
+
+
+
+########################################################################
+
+# Compressing function 
+'''
+1/ The function read the text file which is going to compress it.
+2/ The compress file is based on two techniques of Huffman algorithm which are i) letter and ii) prefix.
+3/ If we plan to use the prefix module we have to make the flag of it True otherwise we can use False flag.
+4/ The functioin creates a compressed file based on selected methd. 
+'''
 
 def doCompressing(path, prefix):
     with open(path, "rt") as file:
         text = file.read()
     words = text.split()
-    print('Read {} words, {} bytes.'.format(len(words), len(text)))
+    
     if prefix == "True":
         compressedDataCode, bits = CompressorPrefix().Compress(words)
         with open("./trash.py", "wt") as outfile:
@@ -21,8 +32,8 @@ def doCompressing(path, prefix):
             outfile.write(compressedDataCode)
         with open("output.txt", "wt") as outfile1:
             outfile1.write(bits)
-    size = len(compressedDataCode)
-    print('{:9d} ./output.txt'.format(size))
+    
+    print('[INFO]...Compressed file has been created and named output.txt')
 
 
 

@@ -1,6 +1,20 @@
+# importing required libaries
+
 from huffman import BitReader
 import sys
 import trash
+
+
+########################################################################
+
+# Decompressing function 
+'''
+1/ Huffman function reads the nodes of Huffman tree
+2/ Expandletters function extracts bits, charctrers and NumChars (if the flag is False for prefix module)
+3/ ExpandPrefix function is based on prefix module and is as below
+4/ deCompress function is based on trash.py file tries to decompress
+'''
+
 
 
 def Huffman(reader, node):
