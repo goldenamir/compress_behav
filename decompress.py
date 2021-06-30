@@ -62,6 +62,7 @@ def doDecompressing(path, prefix):
         data = ExpandLetters(Bits, Char, Numwords)
         with open("decompressFile.txt", "wt") as outfile:
             outfile.write(data)
+    print('[INFO]...DecompressFile.txt has been created!')
 
 
 if __name__ == '__main__':
