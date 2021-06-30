@@ -17,3 +17,7 @@ $ python decompress.py [path to compressed file] [File/True]
 
 ##### Example:
 $ python decompress.py comporessedFile.txt False
+
+##### link for getting more info about the compression methods:
+https://london.ac.uk/sites/default/files/study-guides/data-compression.pdf
+
